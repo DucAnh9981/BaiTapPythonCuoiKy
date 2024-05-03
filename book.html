@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bác sĩ</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+
+    <!-- Embed fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/book.css" />
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const timeSlots = document.querySelectorAll(".time-slot");
+
+        timeSlots.forEach(function (slot) {
+            slot.addEventListener("click", function () {
+                // Loại bỏ lớp "selected" khỏi tất cả các ô thời gian
+                timeSlots.forEach(function (slot) {
+                    slot.classList.remove("selected");
+                });
+                // Thêm lớp "selected" vào ô thời gian được nhấn
+                this.classList.add("selected");
+            });
+
+            // Thêm xử lý cho hiệu ứng hover
+            slot.addEventListener("mouseenter", function () {
+                // Kiểm tra nếu ô không được chọn, thêm lớp "hovered"
+                if (!this.classList.contains("selected")) {
+                    this.classList.add("hovered");
+                }
+            });
+
+            slot.addEventListener("mouseleave", function () {
+                // Kiểm tra nếu ô không được chọn, loại bỏ lớp "hovered"
+                if (!this.classList.contains("selected")) {
+                    this.classList.remove("hovered");
+                }
+            });
+
+            // Thêm xử lý để giữ hiệu ứng hover khi ô đã được chọn
+            slot.addEventListener("click", function () {
+                // Loại bỏ lớp "hovered" khỏi tất cả các ô thời gian
+                timeSlots.forEach(function (slot) {
+                    slot.classList.remove("hovered");
+                });
+                // Thêm lớp "hovered" vào ô thời gian được nhấn
+                this.classList.add("hovered");
+            });
+        });
+    });
+
+
+
+</script>
+
+<body>
+
+    <header class="header fixed">
+        <div class="main-content">
+            <div class="body">
+                <!-- Logo -->
+                <img src="./assets/img/logo2.png" alt="Lesson." class="logo" />
+
+                <!-- Nav -->
+                <nav class="nav">
+                    <ul>
+                        <li class="active">
+                            <a href="./index.html">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#book">Bác sĩ</a>
+                        </li>
+                        <li>
+                            <a href="#hospital">Bệnh viện</a>
+                        </li>
+                        <li>
+                            <a href="#provise">Tư vấn</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Action -->
+                <div class="action">
+                    <a href="#!" class="btn sign-up-btn">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="booking">
+            <div class="profile">
+                <div class="avatar">
+                    <img src="./assets/img/Anh-bac-si-nu-1-min.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Bác sĩ : Lê Thị Minh Hồng</h2>
+                    <p class="desc">24 năm kinh nghiệm</p>
+                    <p class="Specialist">Chuyên khoa : Nhi Khoa</p>
+                    <p class="Position">Chức vụ : Phó giám đốc bệnh viện Nhi</p>
+                    <p class="Work-place">Nơi công tác : Đà Nẵng</p>
+                    <p class="Introduce">Giới thiệu : Bác sĩ Chuyên khoa II Lê Thị Minh Hồng hiện đang là Phó Giám đốc
+                        Bệnh viện Nhi Đồng 2. Bác sĩ trực tiếp khám bệnh theo yêu cầu chất lượng cao tại Bệnh Viện Nhi
+                        Đồng 2 và phòng khám Nhi khoa (250 Nguyễn Xí, Phường 13, Bình Thạnh, TP.HCM).
+                        <span>... xem thêm</span>
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <h2>Đặt lịch khám nhanh</h2>
+                <div class="time-slots">
+                    <div class="time-slot">08:00 - 08:20</div>
+                    <div class="time-slot">08:20 - 08:40</div>
+                    <div class="time-slot">08:40 - 09:00</div>
+                    <div class="time-slot">09:00 - 09:20</div>
+                    <div class="time-slot">09:20 - 09:40</div>
+                    <div class="time-slot">09:40 - 10:00</div>
+                    <div class="time-slot">10:00 - 10:20</div>
+                    <div class="time-slot">10:20 - 10:40</div>
+                    <div class="time-slot">10:40 - 11:00</div>
+                    <div class="time-slot">11:00 - 11:20</div>
+                    <div class="time-slot">13:20 - 13:40</div>
+                    <div class="time-slot">13:40 - 14:00</div>
+                    <div class="time-slot">14:00 - 14:20</div>
+                    <div class="time-slot">14:20 - 14:40</div>
+                    <div class="time-slot">14:40 - 15:00</div>
+                    <div class="time-slot">15:00 - 15:20</div>
+                    <div class="time-slot">15:20 - 15:40</div>
+                    <div class="time-slot">15:40 - 16:00</div>
+                    <div class="time-slot">16:00 - 16:20</div>
+                    <div class="time-slot">16:20 - 16:40</div>
+
+                </div>
+                <div class="book">
+                    <p>Hỗ trợ đặt khám <br>
+                        0919293912
+                    </p>
+                    <div class="btn-book"><a href="">
+                            ĐẶT KHÁM NGAY
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

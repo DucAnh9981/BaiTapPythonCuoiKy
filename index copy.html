@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt khám</title>
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+
+    <!-- Embed fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const controlButtons = document.querySelectorAll('.control-btn');
+    const courseList = document.querySelector('.course-list');
+
+    controlButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        const direction = button.dataset.direction;
+        const scrollAmount = 300; // Điều chỉnh giá trị này nếu bạn muốn điều chỉnh khoảng cách cuộn
+
+        if (direction === 'left') {
+          courseList.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+          });
+        } else if (direction === 'right') {
+          courseList.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+<body>
+    <!-- Header -->
+    <header class="header fixed">
+        <div class="main-content">
+            <div class="body">
+                <!-- Logo -->
+                <img src="./assets/img/logo2.png" alt="Lesson." class="logo" />
+
+                <!-- Nav -->
+                <nav class="nav">
+                    <ul>
+                        <li class="active">
+                            <a href="./index.html">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#book">Bác sĩ</a>
+                        </li>
+                        <li>
+                            <a href="#hospital">Bệnh viện</a>
+                        </li>
+                        <li>
+                            <a href="#provise">Tư vấn</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Action -->
+                <div class="action">
+                    <a href="./sigin.html" class="btn sign-up-btn">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <div class="hero">
+            <div class="main-content">
+                <div class="body">
+                    <!-- Hero left -->
+                    <div class="media-block">
+                        <img src="./assets/img/hero-img.jpg" alt="Learn without limits and spread knowledge."
+                            class="img" />
+
+                        <div class="hero-summary">
+                            <div class="item">
+                                <div class="icon">
+                                    <img src="./assets/icons/circle-user-solid.svg" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="label">Hơn 600 bác sĩ</p>
+                                    <p class="title">Chuyên Nghiệp</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="icon">
+                                    <img src="./assets/icons/city-solid.svg" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="label">25 bệnh viện thiết bị</p>
+                                    <p class="title">Hiện Đại</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="icon">
+                                    <img src="./assets/icons/phone-solid.svg" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="label">Đội ngũ tư vấn</p>
+                                    <p class="title">Tận Tình</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero right -->
+                    <div class="content-block">
+                        <h1 class="heading lv1">
+                            Ứng dụng đặt khám
+                        </h1>
+                        <p class="desc">
+                            Đặt phòng khám và được tư vấn bởi các chuyên gia với hơn 600 bác sĩ, 25 bệnh viện, 100 phòng
+                            khám
+
+                        </p>
+                        <div class="cta-group">
+                            <a href="#book" class="btn hero-cta">Đặt khám ngay</a>
+                            <button class="advise">
+                                <div class="icon">
+                                    <img src="./assets/icons/whatsapp.svg" alt="" />
+                                </div>
+                                <span><a href="#provise">Tư vấn Online</a></span>
+                            </button>
+                        </div>
+                        <p class="desc">Tự hào với</p>
+                        <p class="desc stats">
+                            <strong>50K</strong> bệnh nhân tin tưởng<br>
+                            <strong>20+</strong> thành tựu lớn
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular -->
+        <div id="book"></div>
+        <div class="popular">
+
+            <div class="main-content">
+
+                <div class="popular-top">
+                    <div class="info">
+                        <h2 class="heading lv2">Đặt khám trực tuyến</h2>
+                        <p class="desc">
+                            Phiếu khám kèm số thứ tự và thời gian của bạn được xác nhận
+                        </p>
+                    </div>
+                    <div class="controls">
+                        <div style="
+                        display: flex;
+                        gap: 20px;
+                    ">
+                            <button class="control-btn" data-direction="left">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                              </button>
+                              <button class="control-btn" data-direction="right">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                              </button>
+                        </div>
+                         <div>
+                            <a href="./doctor.html">xem thêm</a>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="course-list">
+                    <!-- Course item 1 -->
+                    <div class="course-item">
+                        <a href="#!">
+                            <img src="./assets/img/41.-Phan-Văn-Chí-scaled.jpg" alt="Basic web design" class="thumb" />
+                        </a>
+                        <div class="info">
+                            <div class="head">
+                                <h3 class="title">
+                                    <a href="#!" class="line-clamp break-all">
+                                        PGS. TS. BS Lâm Việt Trung
+                                    </a>
+                                </h3>
+                                <div class="rating">
+                                    <img src="./assets/icons/star.svg" alt="Star" class="star" />
+                                    <span class="value">4.5</span>
+                                </div>
+                            </div>
+                            <p class="desc line-clamp line-2 break-all">
+                                Bệnh viện đa khoa TP Đà Nẵng
+                            </p>
+                            <div class="foot">
+
+                                <button class="btn book-btn">
+                                    Đặt lịch khám
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course item 2 -->
+                    <div class="course-item">
+                        <a href="#!">
+                            <img src="./assets/img/Anh-bac-si-nu-1-min.jpg" alt="UI/UX design" class="thumb" />
+                        </a>
+                        <div class="info">
+                            <div class="head">
+                                <h3 class="title">
+                                    <a href="#!" class="line-clamp break-all">
+                                        BS. CK2 Lê Thị Minh Hồng
+                                    </a>
+                                </h3>
+                                <div class="rating">
+                                    <img src="./assets/icons/star.svg" alt="Star" class="star" />
+                                    <span class="value">4.5</span>
+                                </div>
+                            </div>
+                            <p class="desc line-clamp line-2 break-all">
+                                Bệnh viện nhi TP Đà Nẵng
+                            </p>
+                            <div class="foot">
+
+                                <button class="btn book-btn">
+                                    Đặt lịch khám
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course item 3 -->
+                    <div class="course-item">
+                        <a href="#!">
+                            <img src="./assets/img/Anh-bac-si-nam-8-min.jpg" alt="Web App design" class="thumb" />
+                        </a>
+                        <div class="info">
+                            <div class="head">
+                                <h3 class="title">
+                                    <a href="#!" class="line-clamp break-all">
+                                        BS. CK2 Võ Đức Hiếu
+                                    </a>
+                                </h3>
+                                <div class="rating">
+                                    <img src="./assets/icons/star.svg" alt="Star" class="star" />
+                                    <span class="value">4.5</span>
+                                </div>
+                            </div>
+                            <p class="desc line-clamp line-2 break-all">
+                                Bệnh viện ưu bướu TP Đà Nẵng
+                            </p>
+                            <div class="foot">
+
+                                <button class="btn book-btn">
+                                    Đặt lịch khám
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="#!">
+                            <img src="./assets/img/41.-Phan-Văn-Chí-scaled.jpg" alt="Basic web design" class="thumb" />
+                        </a>
+                        <div class="info">
+                            <div class="head">
+                                <h3 class="title">
+                                    <a href="#!" class="line-clamp break-all">
+                                        PGS. TS. BS Lâm Việt Trung
+                                    </a>
+                                </h3>
+                                <div class="rating">
+                                    <img src="./assets/icons/star.svg" alt="Star" class="star" />
+                                    <span class="value">4.5</span>
+                                </div>
+                            </div>
+                            <p class="desc line-clamp line-2 break-all">
+                                Bệnh viện đa khoa TP Đà Nẵng
+                            </p>
+                            <div class="foot">
+
+                                <button class="btn book-btn">
+                                    Đặt lịch khám
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hospital"></div>
+        <div class="hospital-list">
+
+            <div class="main-content">
+
+                <div class="hospital-top">
+                    <div class="info">
+                        <h2 class="heading lv2">Danh sách bệnh viện</h2>
+                        <p class="desc">
+                            Các cở sở được đặt hầu hết mọi nơi trong cả nước
+                        </p>
+                    </div>
+                    <div class="controls">
+                        <a href="./hospital.html">Xem thêm</a>
+                    </div>
+                </div>
+
+                <div class="course-list">
+                    <!-- Course item 1 -->
+                    <div class="course-item">
+                        <a href="#!">
+                            <img src="./assets/img/benhvien1.jpg" alt="Basic web design" class="thumb" />
+                        </a>
+                        <div class="info">
+                            <div class="head">
+                                <h3 class="title">
+                                    <a href="#!" class="line-clamp break-all">
+                                        Bệnh viện Nhi TP Đà Nẵng
+                                    </a>
+                                </h3>
+                                <div class="rating">
+                                    <img src="./assets/icons/star.svg" alt="Star" class="star" />
+                                    <span class="value">4.5</span>
+                                </div>
+                            </div>
+                            <div class="foot">
+
+                                <button class="btn book-btn">
+                                    Đặt lịch khám
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course item 2 -->
+                    <div class="course-item">
+                        <a href="#!">
+                            <img src="./assets/img/benhvien2.jpg" alt="UI/UX design" class="thumb" />
+                        </a>
+                        <div class="info">
+                            <div class="head">
+                                <h3 class="title">
+                                    <a href="#!" class="line-clamp break-all">
+                                        Bệnh viện Đa khoa TP Đà Nẵng
+                                    </a>
+                                </h3>
+                                <div class="rating">
+                                    <img src="./assets/icons/star.svg" alt="Star" class="star" />
+                                    <span class="value">4.5</span>
+                                </div>
+                            </div>
+                            <div class="foot">
+
+                                <button class="btn book-btn">
+                                    Đặt lịch khám
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course item 3 -->
+                    <div class="course-item">
+                        <a href="#!">
+                            <img src="./assets/img/benhvien3.jpg" alt="Web App design" class="thumb" />
+                        </a>
+                        <div class="info">
+                            <div class="head">
+                                <h3 class="title">
+                                    <a href="#!" class="line-clamp break-all">
+                                        Bệnh viện ưu bướu
+                                    </a>
+                                </h3>
+                                <div class="rating">
+                                    <img src="./assets/icons/star.svg" alt="Star" class="star" />
+                                    <span class="value">4.5</span>
+                                </div>
+                            </div>
+
+                            <div class="foot">
+
+                                <button class="btn book-btn">
+                                    Đặt lịch khám
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Features 2 -->
+        <div id="provise"></div>
+        <div class="features features-2nd">
+
+            <div class="main-content">
+                <div class="body">
+                    <div class="images">
+                        <img src="./assets/img/layer-5111-(2).jpg"
+                            alt="Take the next step toward your personal and professional goals with Lesson." />
+                    </div>
+                    <div class="content">
+
+                        <h2 class="heading lv2">
+                            Đội ngũ tư vấn
+                        </h2>
+                        <p class="desc">
+                            Hội đồng tham vấn y khoa cùng đội ngũ biên tập viên là các bác sĩ, dược sĩ đảm bảo nội dung
+                            chúng tôi cung cấp chính xác về mặt y khoa và cập nhật những thông tin mới nhất
+                        </p>
+                        <a href="#!" class="btn cta-btn">Tư vấn ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <div id="contact"></div>
+    <footer class="footer">
+        <div class="main-content">
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="column">
+                    <img src="./assets/img/logo2.png" alt="Lesson." class="logo" />
+                    <p class="desc">
+                        Với nhiều năm kinh nghiệm trong lĩnh vực Y tế, chúng tôi hiểu rằng, dữ liệu sức khỏe của bạn chỉ
+                        thuộc về bạn,chúng tôi luôn tuân thủ các chính sách bảo mật dữ liệu cao nhất trên thế giới.
+                    </p>
+                    <div class="socials">
+                        <a href="#!">
+                            <img src="./assets/icons/twitter.svg" alt="Twitter" class="icon" />
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/icons/facebook.svg" alt="Facebook" class="icon" />
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/icons/linkedin.svg" alt="Linkedin" class="icon" />
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/icons/instagram.svg" alt="Instagram" class="icon" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="column">
+                    <h3 class="title">Dịch vụ</h3>
+                    <ul class="list">
+                        <li>
+                            <a href="#!">Đặt khám bác sĩ</a>
+                        </li>
+                        <li>
+                            <a href="#!">Đặt khám bệnh viện</a>
+                        </li>
+                        <li>
+                            <a href="#!">Đặt khám phòng khám</a>
+                        </li>
+                        <li>
+                            <a href="#!">Tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="column">
+                    <h3 class="title">Hỗ trợ</h3>
+                    <ul class="list">
+                        <li>
+                            <a href="#!">Điều khoản sử dụng</a>
+                        </li>
+                        <li>
+                            <a href="#!">Chính sách bảo mật</a>
+                        </li>
+                        <li>
+                            <a href="#!">Chính sách giải quyết khiếu nại</a>
+                        </li>
+                        <li>
+                            <a href="#!">Hỗ trợ khách hàng</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="column">
+                    <h3 class="title">Địa chỉ</h3>
+                    <ul class="list">
+                        <li>
+                            <a href="#!">
+                                <strong>Địa chỉ:</strong> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <strong>Email:</strong> email@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <strong>Phone:</strong> + 000 1234 567 890
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright ©2022 webdesign.gdn All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffb900;
+    --font-heading: Sen, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 8px;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    background: #171100;
+    border-radius: 999px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.logo{
+    width: 48px;
+}
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+.header {
+    background: #61bfeb;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 1;
+}
+
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 8px;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav a {
+    position: relative;
+    padding: 8px 21px;
+    font-size: 1.6rem;
+    color: #5f5b53;
+}
+
+.nav a:hover,
+.nav li.active a {
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+
+
+.header .sign-up-btn {
+    min-width: 128px;
+}
+
+.header .action {
+    margin-left: 49px;
+}
+.booking{
+    width: 900px;
+    max-width: calc(100% - 128px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 30px 12px;
+    border: 1px solid #e2dfda;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+.profile .avatar{
+    width: 300px;
+    height: 300px;
+}
+.profile .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 999px;
+}
+.profile .info{
+    padding: 12px 40px;
+    line-height: 24px;
+    width: 600px;
+}
+.profile .info h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+
+/* CSS */
+.container {
+    width: 100%;  
+    border: 1px solid #e2dfda;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+.container h2{
+    font-weight: 600;
+    padding: 20px 12px;
+    border: 1px solid #e2dfda;
+
+}
+
+.time-slots::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+.time-slots::-webkit-scrollbar-thumb{
+    background-color: #61bfeb;
+    border-radius: 5px;
+}
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    overflow-y: auto; /* Cho phép lăn chuột */
+    height: 100px; /* Độ cao cố định */
+}
+
+.time-slot {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 220px;
+}
+
+.time-slot:hover {
+    background-color: lightblue; 
+}
+.time-slot.selected {
+    background-color: #007bff;
+}
+
+/* Thêm lớp hovered */
+.time-slot.hovered {
+    background-color: #61bfeb;
+}
+.book{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 4px;
+}
+.book p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 60px;
+}
+.book .btn-book{
+    padding: 20px 250px;
+    background-color: #007bff;
+    border-radius: 12px;
+}
+.book .btn-book a{
+    color: #fff;
+}
+.btn-book:hover{
+    opacity: 0.8;
+}
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt lịch khám</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="doctor-profile">
+    <img src="avatar.jpg" alt="Avatar" class="avatar">
+    <h2>Nơi làm việc</h2>
+    <p>Giới thiệu sơ qua về bác sĩ.</p>
+  </div>
+  <div class="schedule">
+    <h3>Lịch khám của bác sĩ</h3>
+    <div class="time-slot" onclick="bookAppointment('09:00')">09:00</div>
+    <div class="time-slot" onclick="bookAppointment('10:00')">10:00</div>
+    <div class="time-slot" onclick="bookAppointment('11:00')">11:00</div>
+    <!-- Thêm thêm các khung thời gian làm việc ở đây -->
+  </div>
+
+  <!-- Script để xử lý việc đặt lịch -->
+  <script>
+    function bookAppointment(time) {
+      alert('Bạn đã đặt lịch khám vào lúc ' + time);
+      // Thêm code xử lý đặt lịch khám ở đây
+    }
+  </script>
+</body>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+.doctor-profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.schedule {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.time-slot {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.time-slot:hover {
+  background-color: #f0f0f0;
+}
+
+</style>
+</html>
