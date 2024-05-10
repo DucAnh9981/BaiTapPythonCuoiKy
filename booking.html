@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bệnh viện</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- Embed fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@700&display=swap"
+        rel="stylesheet" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/booking.css" />
+</head>
+
+<body>
+    <header class="header fixed">
+        <div class="main-content">
+            <div class="body">
+                <!-- Logo -->
+                <img src="./assets/img/logo2.png" alt="Lesson." class="logo" />
+                <!-- Nav -->
+                <nav class="nav">
+                    <ul>
+                        <li class="active">
+                            <a href="./index.html">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#book">Bác sĩ</a>
+                        </li>
+                        <li>
+                            <a href="#hospital">Bệnh viện</a>
+                        </li>
+                        <li>
+                            <a href="#provise">Tư vấn</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Action -->
+                <div class="action">
+                    <a href="#!" class="btn sign-up-btn">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="container">
+                <h2>Phiếu đăng kí khám bệnh</h2>
+                <form action="#" method="post">
+                    <div class="form-text">
+                        <div>
+                            <label for="fullname">Họ và tên:</label>
+                            <input type="text" class="fullname" name="fullname" required>
+                        </div>
+
+
+                        <div class="gioitinh">
+                            <label class="radio-container">Nam
+                                <input type="radio" name="option" checked>
+                            </label>
+                            <label class="radio-container">Nữ
+                                <input type="radio" name="option">
+                            </label>
+                        </div>
+                        <div class="bhyt">
+                            BHYT :
+                            <label class="radio-container">Có
+                                <input type="radio" name="bhyt" checked>
+                            </label>
+                            <label class="radio-container">Không
+                                <input type="radio" name="bhyt">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-text">
+                        <div>
+                            <label for="birthdate">Ngày sinh:</label>
+                            <input type="date" class="birthdate" name="birthdate" required>
+                        </div>
+                        <div>
+                            <label for="passpost">CCCD/CMND:</label>
+                            <input type="text" class="passpost" name="passpost" required>
+                        </div>
+                        
+                    
+                    </div>
+                    <div class="form-text">
+                        <div>
+                            <label for="job">Nghề nghiệp:</label>
+                            <input style="width: 212px;" type="text" class="job" name="job" required>
+                        </div>
+                        <div>
+                            <label for="number">Số điện thoại:</label>
+                            <input type="text" class="number" name="number" required>
+                        </div>
+                    </div>
+                    
+                    <label for="homeTown">Quê quán:</label>
+                    <input style="width: 700px;margin-bottom: 18px;" type="text" class="homeTown" name="homeTown" required><br/>
+                    <div class="book-box">
+                        <label>Khám chuyên khoa:</label>
+                    <input style="width: 280px;margin-bottom: 18px;" type="text" class="specialist" name="specialist" required>
+                        <label for="appDate">Đặt lịch khám ngày:</label>
+                    <input type="date" class="appDate" name="birtappDatehdate" required>
+                    </div>
+                    
+                    <ul><i>Lưu ý :</i>
+                        <li>Khi bạn nhấn đăng ký bạn đã chấp nhận mọi <a href="!#">điều khoản</a> và <a href="!#">chính sách bảo mật</a> của chúng tôi</li>
+                        <li>Vui lòng điền đẩy đủ và chính xác thông tin của bạn</li>
+                        <li>Spam quá nhiều lần sẽ bị khóa tài khoản</li>
+                    </ul>
+                    <div class="book">
+                        <p>Hỗ trợ đặt khám <br>
+                            0919293912
+                        </p>
+                        <div class="btn-book"><a href="">
+                                ĐẶT KHÁM NGAY
+                            </a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

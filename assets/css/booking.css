@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffb900;
+    --font-heading: Sen, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 8px;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    background: #171100;
+    border-radius: 999px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.logo{
+    width: 48px;
+}
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+/* Header */
+.header {
+    background: #0ca3d2;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 1;
+}
+
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav a {
+    position: relative;
+    padding: 8px 21px;
+    font-size: 1.6rem;
+    color: #5f5b53;
+}
+
+.nav a:hover,
+.nav li.active a {
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+
+
+.header .sign-up-btn {
+    min-width: 128px;
+}
+
+.header .action {
+    margin-left: 49px;
+}
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 16px;
+    border: 1px solid #e2dfda;
+    padding: 12px 24px;
+    font-size: 20px;
+}
+.container h2{
+   display: flex;
+   font-weight: 600;
+   font-size: 32px;
+   justify-content: center;
+   margin: 28px 0;
+}
+.form-text{
+    display: flex;
+    gap: 80px;
+    margin: 16px 0;
+}
+.form-text .fullname,.passpost,.birthdate,.job,.number,.homeTown,.specialist{
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px dotted  black; /* Thêm border bottom */
+    outline: none; /* Loại bỏ đường viền xung quanh input khi được focus */
+    width: 240px;
+    height: 24px;
+}
+.container ul{
+    font-size: 12px;
+    list-style:circle;
+    margin: 12px 2px;
+}
+.container ul li{
+    margin: 12px 14px;
+}
+.book{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 4px;
+    font-size: 16px;
+}
+.book p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 60px;
+}
+.book .btn-book{
+    padding: 20px 250px;
+    background-color: #007bff;
+    border-radius: 12px;
+}
+.book .btn-book a{
+    color: #fff;
+}
+.btn-book:hover{
+    opacity: 0.8;
+}

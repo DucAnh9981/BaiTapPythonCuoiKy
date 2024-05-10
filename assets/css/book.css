@@ -82,7 +82,7 @@ a {
 }
 
 .header {
-    background: #61bfeb;
+    background: #0ca3d2;
 }
 
 .header.fixed {
@@ -94,7 +94,7 @@ a {
 .header .body {
     display: flex;
     align-items: center;
-    padding: 20px 0 8px;
+    padding: 36px 0 8px;
 }
 
 .nav {
@@ -127,6 +127,7 @@ a {
 .header .action {
     margin-left: 49px;
 }
+
 .booking{
     width: 900px;
     max-width: calc(100% - 128px);
@@ -163,10 +164,26 @@ a {
     font-weight: 700;
     margin-bottom: 12px;
 }
+.profile .info ul{
+    display: flex;
+    gap: 50px;
+}
 
-
-
-/* CSS */
+.profile .info ul li{
+    display: flex;
+    border: 1px solid #e2dfda;
+    font-weight: 400;
+    padding: 12px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+.profile .info ul li:hover{
+    background-color: #94bbe5;
+}
+.profile .info ul li img{
+    width: 20px;
+    margin-right: 6px;
+}
 .container {
     width: 100%;  
     border: 1px solid #e2dfda;
@@ -239,6 +256,56 @@ a {
 }
 .btn-book:hover{
     opacity: 0.8;
+}
+.bookHospital{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 4px;
+}
+.bookHospital p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 60px;
+}
+.bookHospital .btn-book{
+    padding: 20px 120px;
+    background-color: #007bff;
+    border-radius: 12px;
+}
+.bookHospital .btn-book a{
+    color: #fff;
+}
+.btn-book:hover{
+    opacity: 0.8;
+}
+.detailInfo{
+    display: flex;
+    margin-top: 40px;
+}
+.detailInfo .textH{
+    width: 600px ;
+    margin-right: 50px;
+}
+.detailInfo .textH h2{
+    font-size: 28px;
+    font-weight: 500;
+    margin: 30px 0;
+}
+.detailInfo .textH p{
+    display: flex;
+    line-height: 24px;
+}
+.detailInfo .imgH{
+    margin-top: 88px;
+    width: 300px;
+    height: 200px;
+}
+.detailInfo .imgH img{
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
