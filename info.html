@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bác sĩ</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+
+    <!-- Embed fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/book.css" />
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const timeSlots = document.querySelectorAll(".time-slot");
+
+        timeSlots.forEach(function (slot) {
+            slot.addEventListener("click", function () {
+                // Loại bỏ lớp "selected" khỏi tất cả các ô thời gian
+                timeSlots.forEach(function (slot) {
+                    slot.classList.remove("selected");
+                });
+                // Thêm lớp "selected" vào ô thời gian được nhấn
+                this.classList.add("selected");
+            });
+
+            // Thêm xử lý cho hiệu ứng hover
+            slot.addEventListener("mouseenter", function () {
+                // Kiểm tra nếu ô không được chọn, thêm lớp "hovered"
+                if (!this.classList.contains("selected")) {
+                    this.classList.add("hovered");
+                }
+            });
+
+            slot.addEventListener("mouseleave", function () {
+                // Kiểm tra nếu ô không được chọn, loại bỏ lớp "hovered"
+                if (!this.classList.contains("selected")) {
+                    this.classList.remove("hovered");
+                }
+            });
+
+            // Thêm xử lý để giữ hiệu ứng hover khi ô đã được chọn
+            slot.addEventListener("click", function () {
+                // Loại bỏ lớp "hovered" khỏi tất cả các ô thời gian
+                timeSlots.forEach(function (slot) {
+                    slot.classList.remove("hovered");
+                });
+                // Thêm lớp "hovered" vào ô thời gian được nhấn
+                this.classList.add("hovered");
+            });
+        });
+    });
+
+
+
+</script>
+<style>
+    .profile{
+        border-bottom: none;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        border-top: none;
+        justify-content: flex-end;
+        padding: 12px 40px;
+    }
+    .container ul{
+        display: flex;
+        gap: 30px;
+        margin-right: 30px;
+    }
+</style>
+<body>
+
+    <header class="header fixed">
+        <div class="main-content">
+            <div class="body">
+                <!-- Logo -->
+                <img src="./assets/img/logo2.png" alt="Lesson." class="logo" />
+
+                <!-- Nav -->
+                <nav class="nav">
+                    <ul>
+                        <li class="active">
+                            <a href="./index.html">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#book">Bác sĩ</a>
+                        </li>
+                        <li>
+                            <a href="#hospital">Bệnh viện</a>
+                        </li>
+                        <li>
+                            <a href="#provise">Tư vấn</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Action -->
+                <div class="action">
+                    <a href="#!" class="btn sign-up-btn">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="booking">
+            <div class="profile">
+                <div class="avatar">
+                    <img src="./assets/img/Anh-bac-si-nu-1-min.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Họ tên : Nguyễn Văn A</h2>
+                    <p class="desc">Số điện thoại : 0397845676</p>
+                    <p class="Specialist">Địa chỉ : blabla</p>
+                    <p class="Position">Nghề nghiệp : Tự do</p>
+                    <p class="Work-place">Gmail : nguyenvana@gmail.com</p>
+                   
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <ul>
+                    <li class="btn">Sửa thông tin</li>
+                    <li class="btn">Xóa tài khoản</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
