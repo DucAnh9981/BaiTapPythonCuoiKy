@@ -39,11 +39,9 @@ a {
     opacity: 0.9;
     cursor: pointer;
 }
-
-.logo {
+.logo{
     width: 48px;
 }
-
 .heading {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -121,8 +119,6 @@ a {
     color: #171100;
 }
 
-
-
 .header .sign-up-btn {
     min-width: 128px;
 }
@@ -130,99 +126,39 @@ a {
 .header .action {
     margin-left: 49px;
 }
-
-.calendar{
-    margin-top: 50px;
-}
-.calendar h2{
-    margin: 12px 12px;
-}
-.calendar table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.calendar table,
-th,
-td {
-    border: 1px solid #ddd;
-}
-
-.calendar th,
-td {
-    padding: 10px;
-    text-align: left;
-}
-
-.calendar th {
-    background-color: #f2f2f2;
-}
-
-.calendar tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.calendar tr:hover {
-    background-color: #ddd
-}
-.container{
-    width: 86%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 12px;
-    border-radius: 16px;
+.profile-doctor{
+    margin-top: 80px;
     border: 1px solid #e2dfda;
-    padding: 12px 24px;
-    font-size: 20px;
+    padding: 20px 20px;
+    border-radius: 12px
 }
-.container h2{
-   display: flex;
-   font-weight: 600;
-   font-size: 32px;
-   justify-content: center;
-   margin: 28px 0;
-}
-.form-text{
-    display: flex;
-    gap: 80px;
-    margin: 16px 0;
-}
-.form-text .fullname,.passpost,.birthdate,.job,.number,.homeTown,.specialist{
-    font-size: 20px;
-    border: none;
-    border-bottom: 2px dotted  black; /* Thêm border bottom */
-    outline: none; /* Loại bỏ đường viền xung quanh input khi được focus */
+.profile-doctor .avatardoctor{
     width: 240px;
-    height: 24px;
+    height: 320px;
 }
-.container ul{
-    font-size: 12px;
-    list-style:circle;
-    margin: 12px 2px;
+.profile-doctor .avatardoctor img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.container ul li{
-    margin: 12px 14px;
-}
-.book{
+.profile-doctor .rowprofile{
     display: flex;
-    justify-content: space-between;
-    padding: 12px 4px;
-    font-size: 16px;
+    gap:90px;
 }
-.book p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 60px;
+.profile-doctor .rowprofile ul{
+    line-height: 40px;
 }
-.book .btn-book{
-    padding: 20px 250px;
+.profile-doctor .rowprofile ul li{
+    font-size: 20px;
+}
+.btn-profile{
+    padding: 12px 20px;
     background-color: #007bff;
     border-radius: 12px;
 }
-.book .btn-book a{
+.btn-profile{
     color: #fff;
 }
-.btn-book:hover{
+.btn-profile:hover{
     opacity: 0.8;
 }
